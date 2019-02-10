@@ -21,7 +21,7 @@ public class Interval {
         Interval newInterval = new Interval(second - lastLog.second);
         return newInterval;
     }
-    static Interval fromDays(int days){
+    public static Interval fromDays(int days){
         int secInDays = days * 86400;
         Interval interval = new Interval(secInDays);
         return interval;

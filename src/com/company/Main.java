@@ -9,16 +9,18 @@ public class Main {
         }
         return "Проходи, не задерживайся.";
     }
-    static String helloTimesOfDay(int currentLog){
-        int dayTime = (currentLog % 86400) / 3600;
+    static String helloTimesOfDay(int currentLogSec){
+        Interval currentLogInter = new Interval(currentLogSec);
+        Interval fullDayInSec = Interval.fromDays(currentLogInter.days());
+        Interval dayTime = currentLogInter.subtract(fullDayInSec);
         System.out.println(dayTime);
-        if (dayTime < 6){
+        if (dayTime.hours() < 6){
             return "Доброй ночи.";
-        } else if (dayTime < 12){
+        } else if (dayTime.hours() < 12){
             return "Доброе утро.";
-        } else if (dayTime < 18){
+        } else if (dayTime.hours() < 18){
             return "Добрый день.";
-        } else if (dayTime < 24){
+        } else if (dayTime.hours() < 24){
             return "Добрый вечер.";
         }
         return "Что-то фигня какая-то";
