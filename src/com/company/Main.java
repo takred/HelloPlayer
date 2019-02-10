@@ -38,11 +38,13 @@ public class Main {
     static String helloPlayer(int lastLog, int currentLog) {
         Interval lastLogInter = new Interval(lastLog);
         Interval currentLogEnter = new Interval(currentLog);
-        if (currentLogEnter.days() - lastLogInter.days() >= 7) {
+        int currentLogFullDays = currentLogEnter.days();
+        int lastLogFullDays = lastLogInter.days();
+        if (currentLogFullDays - lastLogFullDays >= 7) {
             return "Здравствуйте! Вы отсутствовали больше недели - НЕ НАДО ТАК!";
         }
-        if (lastLogInter.days() != currentLogEnter.days()) {
-            Interval fullDaysInSec = Interval.fromDays(currentLogEnter.days());
+        if (lastLogFullDays != currentLogFullDays) {
+            Interval fullDaysInSec = Interval.fromDays(currentLogFullDays);
             Interval dayTime = currentLogEnter.subtract(fullDaysInSec);
             if (dayTime.hours() < 6) {
                 return "Доброй ночи.";
