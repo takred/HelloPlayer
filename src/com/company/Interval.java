@@ -20,6 +20,10 @@ public class Interval {
     public Interval subtract(Interval lastLog){
         Interval newInterval = new Interval(second - lastLog.second);
         return newInterval;
-
+    }
+    static Interval fromDays(int days){
+        int secInDays = days * 86400;
+        Interval interval = new Interval(secInDays);
+        return interval;
     }
 }
