@@ -17,7 +17,9 @@ public class Interval {
     public int days(){
         return second / 86400;
     }
-    public int subtract(int lastLog){
-        return second - lastLog;
+    public Interval subtract(Interval lastLog){
+        Interval newInterval = new Interval(second - lastLog.second);
+        return newInterval;
+
     }
 }
