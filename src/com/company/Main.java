@@ -7,7 +7,7 @@ public class Main {
         if (currentLogInter.subtract(lastLogInter).days() >= 7){
             return "Здравствуйте! Вы отсутствовали больше недели - НЕ НАДО ТАК!";
         }
-        return "Проходи, не задерживайся.";
+        return helloTimesOfDay(currentLog);
     }
     static String helloTimesOfDay(int currentLogSec){
         Interval currentLogInter = new Interval(currentLogSec);
@@ -29,7 +29,7 @@ public class Main {
         Interval lastLogDay = new Interval(lastLog);
         Interval currentLogDay = new Interval(currentLog);
         if (lastLogDay.days() != currentLogDay.days()){
-            return "Ну здорова!";
+            return hello(lastLog, currentLog);
         }
         return "";
     }
@@ -37,9 +37,9 @@ public class Main {
     public static void main(String[] args) {
 	// write your code here
         int lastLog = 100;
-        int currentLog = 379045;
-        System.out.println(hello(lastLog, currentLog));
-        System.out.println(helloTimesOfDay(currentLog));
+        int currentLog = 1379045;
+//        System.out.println(hello(lastLog, currentLog));
+//        System.out.println(helloTimesOfDay(currentLog));
         for (int i = 0; i < 10; i++){
             System.out.println(oneHelloInDay(lastLog, currentLog));
             lastLog = currentLog;
