@@ -5,13 +5,13 @@ public class Interval {
     public Interval(int second){
         this.second = second;
     }
-    public static int secInSec(){
-        return ;
+    public  int seconds(){
+        return second;
     }
-    public static int secInMin(){
-        return ;
+    public int minutes(){
+        return second / 60;
     }
-    public static int secInHour(){
-        return  ;
+    public int hours(){
+        return  second /360;
     }
 }
