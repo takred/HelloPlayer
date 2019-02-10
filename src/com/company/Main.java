@@ -2,8 +2,9 @@ package com.company;
 
 public class Main {
     static String hello(int lastLog, int currentLog){
-        Interval dayLastLog = new Interval(currentLog - lastLog);
-        if (dayLastLog.days() >= 7){
+        Interval currentLogInter = new Interval(currentLog);
+        Interval lastLogInter = new Interval(lastLog);
+        if (currentLogInter.subtract(lastLogInter).days() >= 7){
             return "Здравствуйте! Вы отсутствовали больше недели - НЕ НАДО ТАК!";
         }
         return "Проходи, не задерживайся.";
