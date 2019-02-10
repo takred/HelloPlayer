@@ -1,7 +1,7 @@
 package com.company;
 
 public class Interval {
-    int second;
+    final int second;
     public Interval(int second){
         this.second = second;
     }
@@ -12,6 +12,9 @@ public class Interval {
         return second / 60;
     }
     public int hours(){
-        return  second /360;
+        return  second / 3600;
+    }
+    public int days(){
+        return second / 86400;
     }
 }
