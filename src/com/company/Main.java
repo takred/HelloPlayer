@@ -2,8 +2,8 @@ package com.company;
 
 public class Main {
     static String hello(int lastLog, int currentLog){
-        int dayLastLog = (currentLog - lastLog) / 86400;
-        if (dayLastLog >= 7){
+        Interval dayLastLog = new Interval(currentLog - lastLog);
+        if (dayLastLog.days() >= 7){
             return "Здравствуйте! Вы отсутствовали больше недели - НЕ НАДО ТАК!";
         }
         return "Проходи, не задерживайся.";
@@ -23,9 +23,9 @@ public class Main {
         return "Что-то фигня какая-то";
     }
     static String oneHelloInDay(int lastLog, int currentLog){
-        int lastLogDay = lastLog / 86400;
-        int currentLogDay = currentLog / 86400;
-        if (lastLogDay != currentLogDay){
+        Interval lastLogDay = new Interval(lastLog);
+        Interval currentLogDay = new Interval(currentLog);
+        if (lastLogDay.days() != currentLogDay.days()){
             return "Ну здорова!";
         }
         return "";
