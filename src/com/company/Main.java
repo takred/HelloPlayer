@@ -71,5 +71,7 @@ public class Main {
             lastLog = currentLog;
             currentLog = currentLog + 10000;
         }
+        Moment moment = new Moment(currentLog);
+        System.out.println(moment.hours(moment.second)+ " час(а, ов)" + moment.minutes(moment.second) + " минут(а, ы)" + moment.seconds(moment.second) + " секунд(а, ы)");
     }
 }
