@@ -62,7 +62,7 @@ public class Main {
     public static void main(String[] args) {
 	// write your code here
         int lastLog = 100;
-        int currentLog = 1379045;
+        int currentLog = 31399045;
 //        System.out.println(hello(lastLog, currentLog));
 //        System.out.println(helloTimesOfDay(currentLog));
         for (int i = 0; i < 10; i++){
@@ -72,6 +72,6 @@ public class Main {
             currentLog = currentLog + 10000;
         }
         Moment moment = new Moment(currentLog);
-        System.out.println(moment.hours(moment.second)+ " час(а, ов)" + moment.minutes(moment.second) + " минут(а, ы)" + moment.seconds(moment.second) + " секунд(а, ы)");
+        System.out.println(moment.years(moment.second) + " год(а, лет)" + moment.months(moment.second) + " месяц(а, ов) " + moment.days(moment.second) + " день(дней) " + moment.hours(moment.second)+ " час(а, ов) " + moment.minutes(moment.second) + " минут(а, ы) " + moment.seconds(moment.second) + " секунд(а, ы)");
     }
 }
