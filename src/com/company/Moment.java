@@ -2,29 +2,33 @@ package com.company;
 
 public class Moment {
     int second;
+    public static final int[] DAY_IN_MONTH(){
+        int [] dayInMonth = new int[]{31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+        return dayInMonth;
+    }
 public Moment(int second){this.second = second;}
 public int years (int second){return (second / 86400) / 365;}
 public int months(int second){
     int month = 1;
     int day = (second / 86400) % 365;
     System.out.println(day);
-     final int [] DAY_IN_MONTH = new int[]{31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
-    for (int i = 0; i < DAY_IN_MONTH.length; i++){
-        if (day < DAY_IN_MONTH[i]){
+     int [] dayInMonth = DAY_IN_MONTH();
+    for (int i = 0; i < dayInMonth.length; i++){
+        if (day < dayInMonth[i]){
             return i + 1;
         }
-        day = day - DAY_IN_MONTH[i];
+        day = day - dayInMonth[i];
     }
     return month;
 }
 public int days(int second){
     int day = (second / 86400) % 365;
-    final int [] DAY_IN_MONTH = new int[]{31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
-    for (int i = 0; i < DAY_IN_MONTH.length; i++){
-        if (day < DAY_IN_MONTH[i]){
+    int [] dayInMonth = DAY_IN_MONTH();
+    for (int i = 0; i < dayInMonth.length; i++){
+        if (day < dayInMonth[i]){
             return day;
         }
-        day = day - DAY_IN_MONTH[i];
+        day = day - dayInMonth[i];
     }
     return day;
 }
