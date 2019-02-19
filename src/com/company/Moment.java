@@ -9,7 +9,6 @@ public class Moment {
 public Moment(int second){this.second = second;}
 public int years (int second){return (second / 86400) / 365;}
 public int months(int second){
-    int month = 1;
     int day = (second / 86400) % 365;
     System.out.println(day);
      int [] dayInMonth = DAY_IN_MONTH();
@@ -19,7 +18,7 @@ public int months(int second){
         }
         day = day - dayInMonth[i];
     }
-    return month;
+    return 0;
 }
 public int days(int second){
     int day = (second / 86400) % 365;
