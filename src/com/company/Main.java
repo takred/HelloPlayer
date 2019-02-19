@@ -72,6 +72,6 @@ public class Main {
             currentLog = currentLog + 10000;
         }
         Moment moment = new Moment(currentLog);
-        System.out.println(moment.years(moment.second) + " год(а, лет)" + moment.months(moment.second) + " месяц(а, ов) " + moment.days(moment.second) + " день(дней) " + moment.hours(moment.second)+ " час(а, ов) " + moment.minutes(moment.second) + " минут(а, ы) " + moment.seconds(moment.second) + " секунд(а, ы)");
+        System.out.println(moment.years(moment.second) + " год(а, лет)" + moment.months(moment.second) + " месяц(а, ев) " + moment.days(moment.second) + " день(дней) " + moment.hours(moment.second)+ " час(а, ов) " + moment.minutes(moment.second) + " минут(а, ы) " + moment.seconds(moment.second) + " секунд(а, ы)");
     }
 }
