@@ -18,7 +18,7 @@ public int months(int second){
         }
         day = day - dayInMonth[i];
     }
-    return 0;
+    throw new RuntimeException("Kod plohoy");
 }
 public int days(int second){
     int day = (second / 86400) % 365;
