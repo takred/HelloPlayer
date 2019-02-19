@@ -29,7 +29,7 @@ public int days(int second){
         }
         day = day - dayInMonth[i];
     }
-    return day;
+    throw new RuntimeException("Kod plohoy");
 }
 public int hours(int second){return (second % 86400) / 3600;}
 public int minutes(int second){return (second % 3600) / 60;}
