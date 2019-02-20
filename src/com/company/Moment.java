@@ -7,8 +7,8 @@ public class Moment {
         return dayInMonth;
     }
 public Moment(int second){this.second = second;}
-public int years (int second){return (second / 86400) / 365;}
-public int months(int second){
+public int years (){return (second / 86400) / 365;}
+public int months(){
     int day = (second / 86400) % 365;
     System.out.println(day);
      int [] dayInMonth = DAY_IN_MONTH();
@@ -20,7 +20,7 @@ public int months(int second){
     }
     throw new RuntimeException("Kod plohoy");
 }
-public int days(int second){
+public int days(){
     int day = (second / 86400) % 365;
     int [] dayInMonth = DAY_IN_MONTH();
     for (int i = 0; i < dayInMonth.length; i++){
@@ -31,7 +31,7 @@ public int days(int second){
     }
     throw new RuntimeException("Kod plohoy");
 }
-public int hours(int second){return (second % 86400) / 3600;}
-public int minutes(int second){return (second % 3600) / 60;}
-public int seconds(int second){return second % 60;}
+public int hours(){return (second % 86400) / 3600;}
+public int minutes(){return (second % 3600) / 60;}
+public int seconds(){return second % 60;}
 }

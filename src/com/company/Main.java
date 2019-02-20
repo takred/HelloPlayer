@@ -62,18 +62,17 @@ public class Main {
     public static void main(String[] args) {
 	// write your code here
         int lastLog = 100;
-        int currentLog = 3456000;
+        int currentLog = 34556999;
 //        System.out.println(hello(lastLog, currentLog));
 //        System.out.println(helloTimesOfDay(currentLog));
         Moment moment = new Moment(currentLog);
-        System.out.println(moment.years(moment.second) + " год(а, лет)" + moment.months(moment.second) + " месяц(а, ев) " + moment.days(moment.second) + " день(дней) " + moment.hours(moment.second)+ " час(а, ов) " + moment.minutes(moment.second) + " минут(а, ы) " + moment.seconds(moment.second) + " секунд(а, ы)");
+        System.out.println(moment.years() + " год(а, лет)" + moment.months() + " месяц(а, ев) " + moment.days() + " день(дней) " + moment.hours()+ " час(а, ов) " + moment.minutes() + " минут(а, ы) " + moment.seconds() + " секунд(а, ы)");
         for (int i = 0; i < 10; i++){
             System.out.println(helloPlayer(lastLog, currentLog));
 //            System.out.println(oneHelloInDay(lastLog, currentLog));
             lastLog = currentLog;
             currentLog = currentLog + 10000;
         }
-//        Moment moment = new Moment(currentLog);
-        System.out.println(moment.years(moment.second) + " год(а, лет)" + moment.months(moment.second) + " месяц(а, ев) " + moment.days(moment.second) + " день(дней) " + moment.hours(moment.second)+ " час(а, ов) " + moment.minutes(moment.second) + " минут(а, ы) " + moment.seconds(moment.second) + " секунд(а, ы)");
+        System.out.println(moment.years() + " год(а, лет)" + moment.months() + " месяц(а, ев) " + moment.days() + " день(дней) " + moment.hours()+ " час(а, ов) " + moment.minutes() + " минут(а, ы) " + moment.seconds() + " секунд(а, ы)");
     }
 }
