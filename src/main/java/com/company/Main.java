@@ -1,4 +1,4 @@
-package main.java.com.company;
+package com.company;
 
 public class Main {
     static String hello(int lastLog, int currentLog) {
